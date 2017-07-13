@@ -1,0 +1,9 @@
+version: '2'
+services:
+  influx:
+    build: .
+    ports:
+      - "10003:8086"
+    volumes:
+      - ${INFLUX_DATA_DIR}:/var/lib/influxdb
+    restart: always
