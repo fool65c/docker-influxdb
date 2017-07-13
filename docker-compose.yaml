@@ -6,4 +6,5 @@ services:
       - "10003:8086"
     volumes:
       - ${INFLUX_DATA_DIR}:/var/lib/influxdb
+      - ${INFLUX_CONFIG_DIR}/influxdb.conf:/etc/influxdb/influxdb.conf
     restart: always
